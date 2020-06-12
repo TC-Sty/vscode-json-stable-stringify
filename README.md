@@ -1,12 +1,16 @@
 # Sort JSON (Stable)
 
-The `vscode-json-stable-stringify` extension is used to sort a JSON object in VS Code using the [`json-stable-stringify` sort mechanism](https://github.com/substack/json-stable-stringify) to create a standardized, sorted JSON object.
+The `vscode-json5-stable-stringify` extension is used to convert and sort a [JSON5](https://json5.org) object to a plain JSON object in VS Code using the [`json-stable-stringify` sort mechanism](https://github.com/substack/json-stable-stringify) to create a standardized, sorted JSON object.
 
 While it will use the editor's current settings for indentation, it otherwise uses default settings for the sort.
 
 ## Usage
 
 This extension implements only a command accessible via the command palette (`Ctrl+Shift+P`) called `Sort JSON (Stable)`. If you have one or more selections in the editor, the selections will be parsed as JSON, sorted, and formatted. If you have no selection, the whole document will be sorted and formatted.
+
+**Why use this instead of `vscode-json-stable-stringify`?**
+
+While `vscode-json-stable-stringify` strictly needs a valid JSON, this extension allows the benefits of JSON5 like comments, trailing commas, or strings in single quotes.
 
 **Why use this instead of some other formatter/sorter?**
 
@@ -15,10 +19,6 @@ Some JSON sorters implement a document formatter for JSON so the `Format Documen
 Some JSON sorters have too many options or try to do too much and can the results can be unpredictable/unreliable. This one goes for simple and standard using a tried and tested library that has been around for a while [(`json-stable-stringify`)](https://github.com/substack/json-stable-stringify).
 
 Finally, some JSON sorters are hard-tied to the JSON document type. This ignores JSON that might be embedded in a JavaScript file, or even JSON that appears in an HTML file as part of an embedded script. There's no language tie here - highlight something JSON and sort it. No judgment.
-
-## Comments Aren't Valid JSON
-
-Sadly, the JSON spec doesn't allow for comments and `json-stable-stringify`doesn't support them, either. If your JSON has comments, the sort from this plugin will fail. Sorry!
 
 ## Release Notes
 
@@ -29,3 +29,7 @@ Initial release.
 ### 1.1.0
 
 Errors during sort will get written to the "Tasks" output window.
+
+## Credits
+
+Thanks to Travis Illig for his great extension [`vscode-json-stable-stringify`](https://github.com/tillig/vscode-json-stable-stringify)

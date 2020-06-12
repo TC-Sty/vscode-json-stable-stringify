@@ -31,12 +31,12 @@ describe('Entry point', () => {
       it('activates the extension', () => {
         entry.activate(extensionContext);
         assert.equal(1, extensionContext.subscriptions.length);
-        assert.isTrue(registerStub.calledOnceWithExactly('extension.vscode-json-stable-stringify.jsonStableSort', sinon.match.any));
+        assert.isTrue(registerStub.calledOnceWithExactly('extension.vscode-json5-stable-stringify.jsonStableSort', sinon.match.any));
       });
 
       it('prints an activation informative message', () => {
         entry.activate(extensionContext);
-        assert.isTrue(infoStub.calledOnceWithExactly('[vscode-json-stable-stringify] activated!'));
+        assert.isTrue(infoStub.calledOnceWithExactly('[vscode-json5-stable-stringify] activated!'));
       });
     });
 

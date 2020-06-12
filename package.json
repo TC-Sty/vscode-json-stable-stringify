@@ -1,10 +1,10 @@
 {
-  "name": "vscode-json-stable-stringify",
-  "version": "1.1.0",
-  "displayName": "JSON Stable Sort",
-  "description": "JSON object sort/document formatter using json-stable-stringify.",
+  "name": "vscode-json5-stable-stringify",
+  "version": "1.2.0",
+  "displayName": "JSON5 Stable Sort",
+  "description": "JSON5 object sort/document formatter using json-stable-stringify.",
   "license": "MIT",
-  "publisher": "TravisIllig",
+  "publisher": "MatthiasStyrsky",
   "engines": {
     "vscode": "^1.32.0"
   },
@@ -13,27 +13,27 @@
   ],
   "keywords": [
     "sort",
-    "json",
+    "json5",
     "format"
   ],
-  "homepage": "https://github.com/tillig/vscode-json-stable-stringify",
-  "qna": "https://github.com/tillig/vscode-json-stable-stringify/issues",
+  "homepage": "https://github.com/tc-sty/vscode-json-stable-stringify",
+  "qna": "https://github.com/tc-sty/vscode-json-stable-stringify/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tillig/vscode-json-stable-stringify"
+    "url": "https://github.com/tc-sty/vscode-json-stable-stringify"
   },
   "bugs": {
-    "url": "https://github.com/tillig/vscode-json-stable-stringify/issues"
+    "url": "https://github.com/tc-sty/vscode-json-stable-stringify/issues"
   },
   "activationEvents": [
-    "onCommand:extension.vscode-json-stable-stringify.jsonStableSort"
+    "onCommand:extension.vscode-json5-stable-stringify.jsonStableSort"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.vscode-json-stable-stringify.jsonStableSort",
-        "title": "Sort JSON (Stable)"
+        "command": "extension.vscode-json5-stable-stringify.jsonStableSort",
+        "title": "Sort JSON5 (Stable)"
       }
     ]
   },
